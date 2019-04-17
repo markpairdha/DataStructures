@@ -35,7 +35,6 @@ Node *peek(Stack *stack)
    return stack->array[stack->top];  	
 }
 
-
 int isEmpty(Stack *stack)
 {
    return stack->top == -1;
