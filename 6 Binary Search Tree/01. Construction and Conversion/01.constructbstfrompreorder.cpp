@@ -54,4 +54,3 @@ int main()
   node *root = constructTree(pre,size);
   inorder(pre,size);	
 }
-
