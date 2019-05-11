@@ -27,8 +27,8 @@ void push(Node **head,int data)
 }
 int main()
 {
-	Node *head = NULL;
-	push(&head,11);
+   Node *head = NULL;
+    push(&head,11);
     push(&head,12);
     push(&head,13);
     push(&head,14);
