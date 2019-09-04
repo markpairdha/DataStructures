@@ -20,7 +20,7 @@ int getCount(Node *head)
 {
   if(head == NULL)
      return 0;
-  return 1+getCount(head->next); 	
+  return 1+	getCount(head->next); 	
 }
 
 int main()

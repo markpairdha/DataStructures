@@ -1,5 +1,7 @@
 #include<stdio.h> 
 #include<stdlib.h> 
+#include<bits/stdc++.h>
+using namespace std;
   
 /* Link list node */
 struct node 
@@ -11,14 +13,13 @@ struct node
 void printMiddle(struct node *head)
 {
 	struct node *one = head,*two = head;
-	while(two != NULL && two->next != NULL)
+	while(one != NULL && two != NULL)
 	{
 		one = one->next;
 		two = two->next->next;
 	}
 	cout << one->data << "\n";
 }
-
 void push(struct node** head_ref, int new_data) 
 { 
     /* allocate node */
@@ -61,4 +62,4 @@ int main()
     } 
   
     return 0; 
-}
+} 

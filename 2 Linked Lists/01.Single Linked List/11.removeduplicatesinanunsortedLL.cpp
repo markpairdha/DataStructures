@@ -1,6 +1,13 @@
-//without recursion using two pointers
+#include<bits/stdc++.h>
+#include<string>
+using namespace std;
 
-Node *removeDuplicates(Node *head)
+struct Node {
+	int data;
+	struct Node *next;
+};
+
+Node *removeduplicates(Node *head)
 {
 	Node *outer = head,*inner = NULL,*hold;
 	while(outer != NULL && outer->next != NULL)
@@ -19,26 +26,20 @@ Node *removeDuplicates(Node *head)
 		}
 		outer = outer->next;
 	}
-	return head;
 }
 
-
-// using hashing
-void removeduplicates(struct Node *head)
+void push(struct Node **head,int data)
 {
-   unordered_set<int> hash;
-   struct Node *curr = start,*old = NULL;
-   while(curr != NULL)
-   {
-       if(hash.find(curr->data) != hash.end)
-       {
-          prev->next = curr->next;
-          free(curr);
-       }
-       else
-       {
-          hash.insert(curr->data);
-          prev = curr;  
-       }
-   }
+   	struct Node *new_node;
+   	new_node->data = data;
+   	new_node->next = (*head);
+   	(*head) = new_node;
+}
+
+int main()
+{
+	struct Node *head = NULL;
+    Node *node = removeduplicates(head);
+    print(node);
+	return 0;	
 }
